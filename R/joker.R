@@ -11,6 +11,7 @@
 joke <- function(seed=sample(1:10000,1)){
   set.seed(seed = seed)
   Myjoker <- read.csv("joker.csv")
+  Myjoker <- unique(Myjoker$x)
   return(Myjoker[sample(x = 1:length(Myjoker),size = 1,replace = F)])
 
 }
